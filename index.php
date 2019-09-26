@@ -16,8 +16,8 @@
         <div class="container-fluid">
 
             <div class="jumbotron">
-                <center><h1 class="display-4">PHP PASSWORD HASHING</h1></center>
-                <center><p class="lead">Login</p></center>
+                <center><h1 class="display-4" style="color: #006699;">PHP PASSWORD HASHING</h1></center>
+                <center><p class="lead" style="color: #006699;">Login</p></center>
             </div>
 
             <div class="row" style="margin-top: 40px;">
@@ -36,6 +36,16 @@
                         <input id="password" minlength="5" type="password" class="form-control"  placeholder="Password..."><br/>
                         <input type="submit" class="form-control  btn-info" id="loginBtn" value="Login">
                     </form>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+
+            <div class="row" style="margin-top: 14px;">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <center>
+                         <a href="register.php" class="page-link"><i>No account? Signup free</i></a>
+                    </center>
                 </div>
                 <div class="col-md-4"></div>
             </div>

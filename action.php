@@ -27,9 +27,10 @@
                         echo "
                             <div class='alert alert-success' role='alert'>
                             <a href='#' class='close' data-dismiss='alert' aria-label='Close'>&times;</a>
-                            <b>Successful registered</b>
+                            <b>Successfully added</b>
                             </div>
                         ";
+
                         echo "
                             <script>
                                 setTimeout(function () {
