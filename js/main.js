@@ -1,5 +1,22 @@
 $(document).ready(function(){
     
+    $("#loginBtn").click(function(event){
+        event.preventDefault();
+        var email = $("#email").val();
+        var password = $("#password").val();
+        $.ajax({
+            method: "POST",
+            url: "action.php",
+            data: {
+                loginBtn:1,
+                password:password,
+                email:email
+            },
+            success: function(response){
+                $("#login_message").html(response);
+            }
+        })
+    });
 
     $("#registerBtn").click(function(event){
         event.preventDefault();
@@ -22,6 +39,7 @@ $(document).ready(function(){
             success: function (response) {
                 // alert(response);
                 $("#registration_message").html(response);
+               
             }
         });
     });
