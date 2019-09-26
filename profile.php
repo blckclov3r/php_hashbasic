@@ -1,10 +1,3 @@
-<?php
-    session_start();
-    if(isset($_SESSION['uid'])){
-        header("location: profile.php");
-    }
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -36,28 +29,34 @@
                 <div class="col-md-4"></div>
             </div>
 
-            <div class="row" style="margin-top: 40px;">
-                <div class="col-md-4"></div>
-                <div class="col-md-4">
-                    <form method="POST">
-                        <input id="email"  type="email" class="form-control" placeholder="Email..."><br/>
-                        <input id="password" minlength="5" type="password" class="form-control"  placeholder="Password..."><br/>
-                        <input type="submit" class="form-control  btn-info" id="loginBtn" value="Login">
-                    </form>
+            <div class="row row_table" style="margin-top: 40px;">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <table class="table table-bordered table-responsive-md">
+                            <tr>
+                                <th>ID</th>
+                                <th>NAME</th>
+                                <th>EMAIL</th>
+                                <th>PASSWORD</th>
+                            </tr>
+                            <tr id="information"></tr>
+                        </table>
+                    </div>
                 </div>
-                <div class="col-md-4"></div>
+                <div class="col-md-3"></div>
             </div>
 
-            <div class="row" style="margin-top: 14px;">
+            <div class="row" style="margin-top: 50px;">
                 <div class="col-md-4"></div>
                 <div class="col-md-4">
                     <center>
-                         <a href="register.php" class="page-link"><i>No account? Signup free</i></a>
+                         <a href="logout.php" class="page-link"><i>Logout</i></a>
                     </center>
                 </div>
                 <div class="col-md-4"></div>
             </div>
-        </div>
+      
         
        
         <div class="footer">

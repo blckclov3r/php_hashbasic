@@ -183,11 +183,15 @@ select {
 html, body{
     height: 100%;
     position: relative;
+  
 }
 
 .container-fluid{
   
 }
+
+
+
 
  .footer{
     color: #006699;

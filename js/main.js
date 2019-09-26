@@ -1,5 +1,7 @@
 $(document).ready(function(){
-    
+
+    profile_information();
+
     $("#loginBtn").click(function(event){
         event.preventDefault();
         var email = $("#email").val();
@@ -42,6 +44,19 @@ $(document).ready(function(){
         });
     });
 
-    
+    function profile_information(){
+        $.ajax({
+            method: "POST",
+            url: "action.php",
+            data: {
+                information:1
+            },
+            success: function(response){
+                $("#information").html(response);
+            }
+        });
+    }
 
+
+    
 });
