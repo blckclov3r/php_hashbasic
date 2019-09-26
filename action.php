@@ -24,15 +24,21 @@
                 $sql = "INSERT INTO users (name,email,password) VALUES('$name','$email','$hash')";
                 $query = mysqli_query($this->getConn(),$sql);
                 if($query){
-                    echo "
+                        echo "
                             <div class='alert alert-success' role='alert'>
                             <a href='#' class='close' data-dismiss='alert' aria-label='Close'>&times;</a>
                             <b>Successful registered</b>
                             </div>
                         ";
-                    
+                        echo "
+                            <script>
+                                setTimeout(function () {
+                                    window.location.href = 'index.php?success';
+                                }, 3000); 
+                            </script> ";
+                        exit();
                 }else{
-                    echo "
+                        echo "
                             <div class='alert alert-danger' role='alert'>
                             <a href='#' class='close' data-dismiss='alert' aria-label='Close'>&times;</a>
                             <b>Something went wrong</b>
@@ -40,6 +46,7 @@
                         ";
                 }
             }
+          
         }
 
         public function login(){
@@ -62,7 +69,7 @@
                     echo "
                     <div class='alert alert-danger' role='alert'>
                     <a href='#' class='close' data-dismiss='alert' aria-label='Close'>&times;</a>
-                    <b>Please check the email and password again</b>
+                    <b>Please check the email or password again</b>
                     </div>
                      ";
                 }
@@ -84,7 +91,7 @@
 
 
     if(isset($_POST['registerBtn'])){
-        $obj->register();
+       $obj->register();
     }
 
     if(isset($_POST['loginBtn'])){

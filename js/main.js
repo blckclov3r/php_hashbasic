@@ -37,13 +37,11 @@ $(document).ready(function(){
                 repassword : repassword
             },
             success: function (response) {
-                // alert(response);
                 $("#registration_message").html(response);
-               
             }
         });
     });
 
-
+    
 
 });

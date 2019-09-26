@@ -9,6 +9,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
 
@@ -20,16 +21,16 @@
             </div>
 
             <div class="row" style="margin-top: 40px;">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
                     <div id="registration_message"></div>
                 </div>
-                <div class="col-md-3"></div>
+                <div class="col-md-4"></div>
             </div>
 
             <div class="row" style="margin-top: 40px;">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
                     <form method="POST">
                         <input id="name"  minlength="3" class="form-control"  placeholder="Name..."><br/>
                         <input id="email"  type="email" class="form-control" placeholder="Email..."><br/>
@@ -39,7 +40,7 @@
                         <input type="submit" class="form-control  btn-info" id="registerBtn" value="Register">
                     </form>
                 </div>
-                <div class="col-md-3"></div>
+                <div class="col-md-4"></div>
             </div>
         </div>
         
