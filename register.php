@@ -18,6 +18,7 @@
             <div class="jumbotron">
                 <center><h1 class="display-4" style="color: #006699;">PHP PASSWORD HASHING</h1></center>
                 <center><p class="lead" style="color: #006699;">Registration</p></center>
+                <center><p  style="color: #006699;">test purpose only</p></center>
             </div>
 
             <div class="row" style="margin-top: 40px;">
@@ -52,6 +53,10 @@
                 </div>
                 <div class="col-md-4"></div>
             </div>
+        </div>
+
+        <div class="footer">
+            <center><p>&copy; github.com/blckclov3r</p></center>
         </div>
         
         <script src="js/jquery-3.4.1.min.js" ></script>

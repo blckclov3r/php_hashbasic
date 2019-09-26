@@ -1,5 +1,5 @@
 <?php
-    include 'db.php';
+    require 'db.php';
     
     class DatabaseOperation extends Database{
         
@@ -19,32 +19,44 @@
                     </div>
                 ";
             }else{
-                
-                $hash = password_hash($password,PASSWORD_BCRYPT);
-                $sql = "INSERT INTO users (name,email,password) VALUES('$name','$email','$hash')";
-                $query = mysqli_query($this->getConn(),$sql);
-                if($query){
-                        echo "
-                            <div class='alert alert-success' role='alert'>
-                            <a href='#' class='close' data-dismiss='alert' aria-label='Close'>&times;</a>
-                            <b>Successfully added</b>
-                            </div>
-                        ";
 
-                        echo "
-                            <script>
-                                setTimeout(function () {
-                                    window.location.href = 'index.php?success';
-                                }, 3000); 
-                            </script> ";
-                        exit();
+                $sql = "SELECT id FROM users WHERE email = '$email' LIMIT 1";
+                $query = mysqli_query($this->getConn(),$sql);
+                $count = mysqli_num_rows($query);
+
+                if($count > 0){
+                    echo "
+                    <div class='alert alert-danger' role='alert'>
+                        <a href='#' class='close' data-dismiss='alert' aria-label='Close'>&times;</a>
+                        <b>The email you entered is not available, please use another email address</b>
+                    </div>
+                    ";                  
                 }else{
-                        echo "
-                            <div class='alert alert-danger' role='alert'>
-                            <a href='#' class='close' data-dismiss='alert' aria-label='Close'>&times;</a>
-                            <b>Something went wrong</b>
-                            </div>
-                        ";
+                    $hash = password_hash($password,PASSWORD_BCRYPT);
+                    $sql = "INSERT INTO users (name,email,password) VALUES('$name','$email','$hash')";
+                    $query = mysqli_query($this->getConn(),$sql);
+                    if($query){
+                            echo "
+                                <div class='alert alert-success' role='alert'>
+                                <a href='#' class='close' data-dismiss='alert' aria-label='Close'>&times;</a>
+                                <b>Successfully added</b>
+                                </div>
+
+                                <script>
+                                    setTimeout(function () {
+                                        window.location.href = 'index.php?success';
+                                    }, 3000); 
+                                </script> 
+                            ";
+                            exit();
+                    }else{
+                            echo "
+                                <div class='alert alert-danger' role='alert'>
+                                <a href='#' class='close' data-dismiss='alert' aria-label='Close'>&times;</a>
+                                <b>Something went wrong</b>
+                                </div>
+                            ";
+                    }
                 }
             }
           

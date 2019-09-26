@@ -179,4 +179,25 @@ select {
 }
 /* END OF CSS DOCTOR */
 
+/* my css code */
+html, body{
+    height: 100%;
+    position: relative;
+}
+
+.container-fluid{
+  
+}
+
+ .footer{
+    color: #006699;
+    background-color: #E9ECEF;
+    position: relative;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    clear: both;
+}
 
