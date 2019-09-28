@@ -30,21 +30,20 @@
             </div>
 
             <div class="row row_table" style="margin-top: 40px;">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
                     <div class="row">
                         <table class="table table-bordered table-responsive-md">
                             <tr>
                                 <th>ID</th>
                                 <th>NAME</th>
-                                <th>EMAIL</th>
-                                <th>PASSWORD</th>
+                                <th>EMAIL</th>  
                             </tr>
                             <tr id="information"></tr>
                         </table>
                     </div>
                 </div>
-                <div class="col-md-3"></div>
+                <div class="col-md-4"></div>
             </div>
 
             <div class="row" style="margin-top: 50px;">

@@ -46,7 +46,7 @@
                             <script>
                                 setTimeout(function () {
                                     window.location.href = 'index.php?success';
-                                }, 3000); 
+                                }, 500); 
                             </script> 
                         ";
                         exit();
@@ -105,7 +105,7 @@
                           <script>
                             setTimeout(function () {
                                 window.location.href = 'profile.php';
-                            }, 1200); 
+                            }, 500); 
                           </script> 
                         ";
                     
@@ -139,7 +139,6 @@
                     <td>".$row['id']."</td>
                     <td>".$row['name']."</td>
                     <td>".$row['email']."</td>
-                    <td>".$row['password']."</td>
                 ";
             }
         }
