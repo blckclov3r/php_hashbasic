@@ -10,7 +10,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>PHP Password Hashing -Login</title>
+        <title>PHP OOP</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/bootstrap.css">
@@ -21,7 +21,7 @@
         <div class="container-fluid">
 
             <div class="jumbotron">
-                <center><h1 class="display-4" style="color: #006699;">PHP PASSWORD HASHING</h1></center>
+                <center><h1 class="display-4" style="color: #006699;">PHP OOP</h1></center>
                 <center><p class="lead" style="color: #006699;">Login</p></center>
                 <center><p  style="color: #006699;">test purpose only</p></center>
             </div>
